@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DG@R - Sistema de Ventas de Herramientas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f9ff;
+            color: #003366;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+        }
+        header img {
+            height: 60px;
+            width: auto;
+            margin-right: 15px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            text-align: center;
+        }
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 16px;
+            color: #d0e0ff;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            background-color: #e0e7ff;
+            padding: 10px;
+        }
+        nav a {
+            margin: 0 10px;
+            color: #003366;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 30px;
+            max-width: 900px;
+            margin: auto;
+            background-color: white;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #003366;
+            text-align: center;
+        }
+        p.centrado {
+            text-align: center;
+            font-size: 18px;
+        }
+        button {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0055aa;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        img.producto-img {
+            width: 100px;
+            border-radius: 10px;
+        }
+        .catalogo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .producto {
+            width: 45%;
+            background-color: #f0f4ff;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .producto {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="img/logo.jpeg" alt="Logo DG@R">
+    <div>
+        <h1>DG@R</h1>
+        <p>Lo que necesitas, cuando lo necesitas.</p>
+    </div>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#pedido">Pedido</a>
+    <a href="#login">Administrador</a>
+</nav>
+
+<section id="inicio">
+    <h2>Bienvenidos</h2>
+    <p class="centrado">
+        Bienvenidos a DG@R, aquí encontrarás todo lo que necesitas para tus proyectos de construcción y reparación.
+    </p>
+    <div style="text-align:center;">
+        <button onclick="location.href='#catalogo'">Acceder al Catálogo</button>
+    </div>
+</section>
+
+<section id="catalogo">
+    <h2>Catálogo de Herramientas</h2>
+    <div class="catalogo">
+        <div class="producto">
+            <img class="producto-img" src="img/martillo.webp" alt="Martillo">
+            <h3>Martillo</h3>
+            <p>Precio: $120 MXN</p>
+            <button>Comprar</button>
+        </div>
+        <div class="producto">
+            <img class="producto-img" src="img/cincel.jpg" alt="cincel">
+            <h3>Cincel</h3>
+            <p>Precio: $80 MXN</p>
+            <button>Comprar</button>
+        </div>
+        <div class="producto">
+            <img class="producto-img" src="img/Llave.jpg" alt="Llave inglesa">
+            <h3>Llave inglesa</h3>
+            <p>Precio: $150 MXN</p>
+            <button>Comprar</button>
+        </div>
+        <div class="producto">
+            <img class="producto-img" src="img/taladro.jpg" alt="Taladro">
+            <h3>Taladro</h3>
+            <p>Precio: $850 MXN</p>
+            <button>Comprar</button>
+        </div>
+        <div class="producto">
+            <img class="producto-img" src="img/cerrucho.jpg" alt="Serrucho">
+            <h3>Serrucho</h3>
+            <p>Precio: $180 MXN</p>
+            <button>Comprar</button>
+        </div>
+        <div class="producto">
+            <img class="producto-img" src="img/cinta.jpg" alt="Cinta métrica">
+            <h3>Cinta métrica</h3>
+            <p>Precio: $75 MXN</p>
+            <button>Comprar</button>
+        </div>
+    </div>
+</section>
+
+<section id="pedido">
+    <h2>Realizar Pedido</h2>
+    <form>
+        <label>Nombre completo:</label>
+        <input type="text" required>
+        <label>Correo electrónico:</label>
+        <input type="email" required>
+        <label>Teléfono:</label>
+        <input type="tel" required>
+        <label>Municipio:</label>
+        <input type="text" required>
+        <button type="submit">Realizar Pedido</button>
+    </form>
+</section>
+
+<section id="login">
+    <h2>Acceso del Administrador</h2>
+    <form>
+        <label>Correo electrónico:</label>
+        <input type="email" required>
+        <label>Contraseña:</label>
+        <input type="password" required>
+        <button type="submit">Ingresar</button>
+    </form>
+</section>
+
+</body>
+</html>
